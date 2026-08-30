@@ -22,8 +22,9 @@ convert_btn.onclick = async function() {
     try {
         const file = img_input.files[0];
         if (file) {
-            const buffer = await imageBlp(WORKER, file);
-            const result = await uploadBlp(WORKER, buffer);
+            const new_blp = await imageBlp(WORKER, file);
+            const new_buffer = await writeBlp(WORKER, new_blp);
+            const result = await uploadBlp(WORKER, new_buffer);
             text_id.textContent = result.id;
             link_id.href = result.url;
             link_id.textContent = result.url;
