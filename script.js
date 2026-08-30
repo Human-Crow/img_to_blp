@@ -1,5 +1,5 @@
 import {
-    uploadBlp, imageBlp
+    uploadBlp, imageBlp, writeBlp
 } from "https://builderment.hcrow.workers.dev/api.js";
 
 const WORKER = "https://builderment.hcrow.workers.dev";
